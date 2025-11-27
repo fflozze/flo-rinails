@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestations Sourcils | Flo Rinails</title>
+    <link rel="icon" type="image/webp" href="assets/logo_flo_rinails.webp">
+    <meta name="description" content="Découvrez nos prestations sourcils : microblading, restructuration, teinture et plus. Sublimez votre regard chez Flo Rinails.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Burger -->
+    <nav class="navbar">
+        <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo_flo_rinails.svg" alt="Flo Rinails Logo">
+        </a>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/logo_oeil_+_main.svg" alt="Flo Rinails Icon" class="sidebar-icon">
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                <span>Accueil</span>
+            </a>
+            <a href="prestations-sourcils.html" class="sidebar-link active">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 12c2-4 6-7 10-7s8 3 10 7c-2 4-6 7-10 7s-8-3-10-7z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span>Prestations Sourcils</span>
+            </a>
+            <a href="prestations-ongles.html" class="sidebar-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2c-1.5 0-3 1.5-3 4v10c0 2 1.5 4 3 4s3-2 3-4V6c0-2.5-1.5-4-3-4z"/>
+                    <path d="M9 8c-2 0-4 1-4 3v6c0 2 2 4 4 4"/>
+                    <path d="M15 8c2 0 4 1 4 3v6c0 2-2 4-4 4"/>
+                </svg>
+                <span>Prestations Ongles</span>
+            </a>
+            <a href="prestations-cils.html" class="sidebar-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 5c-4 0-8 3-10 7 2 4 6 7 10 7s8-3 10-7c-2-4-6-7-10-7z"/>
+                    <path d="M12 4V1M8 5L6 2M16 5l2-3M4 8L1 6M20 8l3-2"/>
+                </svg>
+                <span>Prestations Cils</span>
+            </a>
+            <a href="contact.html" class="sidebar-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+                <span>Contact</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="https://www.instagram.com/flo_rinails" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/Florinails974/" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <header class="page-header">
+            <div class="header-particles"></div>
+            <div class="container">
+                <span class="section-tag">Nos Prestations</span>
+                <h1 class="page-title">Sourcils</h1>
+                <p class="page-subtitle">Nos prestations sourcils arrivent bientôt</p>
+            </div>
+        </header>
+
+        <!-- Coming Soon Section -->
+        <section class="prestations-section">
+            <div class="container">
+                <div class="coming-soon-wrapper">
+                    <div class="coming-soon-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h2 class="coming-soon-title">Bientôt disponible</h2>
+                    <p class="coming-soon-text">Nos prestations sourcils arrivent très prochainement.<br>Microblading, restructuration, teinture et bien plus encore...</p>
+                    <p class="coming-soon-subtext">Restez connectés sur nos réseaux sociaux pour être informés du lancement !</p>
+                    <div class="coming-soon-social">
+                        <a href="https://www.instagram.com/flo_rinails" target="_blank" rel="noopener" class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                            </svg>
+                            <span>Suivez-nous sur Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <img src="assets/logo_flo_rinails.svg" alt="Flo Rinails" class="footer-logo">
+                        <p class="footer-tagline">Votre institut de beauté</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Navigation</h4>
+                            <a href="index.html">Accueil</a>
+                            <a href="prestations-sourcils.html">Sourcils</a>
+                            <a href="prestations-ongles.html">Ongles</a>
+                            <a href="prestations-cils.html">Cils</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Contact</h4>
+                            <a href="https://www.fresha.com/fr/book-now/flo-rinails-uepist6u/services?lid=2714198&eid=4788688&share=true&pId=2626432" target="_blank" rel="noopener">Prendre RDV</a>
+                            <a href="tel:+262693529100">+262 693 529 100</a>
+                            <a href="mailto:florinails@gmail.com">florinails@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/flo_rinails" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/Florinails974/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Flo Rinails. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Bouton Retour en Haut -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
