@@ -333,6 +333,15 @@ window.addEventListener('load', () => {
     });
 });
 
+// Handle back/forward navigation (bfcache) - reload page to fix blank screen on GitHub Pages
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        // Page was loaded from bfcache (back/forward button)
+        // Force reload to ensure proper rendering
+        window.location.reload();
+    }
+});
+
 // Handle internal link clicks for smooth transitions
 document.querySelectorAll('a[href]:not([href^="#"]):not([href^="mailto"]):not([href^="tel"])').forEach(link => {
     if (link.hostname === window.location.hostname) {
