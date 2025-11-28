@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prestations Cils | Flo Rinails</title>
+    <title>Prestations Cils | Flo RiNails</title>
     <link rel="icon" type="image/webp" href="assets/logo_flo_rinails.webp">
-    <meta name="description" content="Découvrez nos prestations cils : extensions, rehaussement et teinture. Un regard intense et captivant chez Flo Rinails.">
+    <meta name="description" content="Découvrez nos prestations cils : extensions, rehaussement et teinture. Un regard intense et captivant chez Flo RiNails.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,15 +19,41 @@
             <span class="burger-line"></span>
             <span class="burger-line"></span>
         </button>
+        
+        <!-- Barre de recherche -->
+        <div class="search-container" id="searchContainer">
+            <button class="search-toggle" id="searchToggle" aria-label="Ouvrir la recherche">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+            </button>
+            <div class="search-box" id="searchBox">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Rechercher une prestation..." autocomplete="off">
+                    <button class="search-close" id="searchClose" aria-label="Fermer la recherche">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+        
         <a href="index.html" class="nav-logo">
-            <img src="assets/logo_flo_rinails.svg" alt="Flo Rinails Logo">
+            <img src="assets/logo_flo_rinails.svg" alt="Flo RiNails Logo">
         </a>
     </nav>
 
     <!-- Sidebar Menu -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="assets/logo_oeil_+_main.svg" alt="Flo Rinails Icon" class="sidebar-icon">
+            <img src="assets/logo_flo_rinails.svg" alt="Flo RiNails Logo" class="sidebar-icon">
         </div>
         <nav class="sidebar-nav">
             <a href="index.html" class="sidebar-link">
@@ -37,27 +63,17 @@
                 </svg>
                 <span>Accueil</span>
             </a>
-            <a href="prestations-sourcils.html" class="sidebar-link">
-                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M2 12c2-4 6-7 10-7s8 3 10 7c-2 4-6 7-10 7s-8-3-10-7z"/>
-                    <circle cx="12" cy="12" r="3"/>
-                </svg>
-                <span>Prestations Sourcils</span>
-            </a>
             <a href="prestations-ongles.html" class="sidebar-link">
-                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 2c-1.5 0-3 1.5-3 4v10c0 2 1.5 4 3 4s3-2 3-4V6c0-2.5-1.5-4-3-4z"/>
-                    <path d="M9 8c-2 0-4 1-4 3v6c0 2 2 4 4 4"/>
-                    <path d="M15 8c2 0 4 1 4 3v6c0 2-2 4-4 4"/>
-                </svg>
+                <img src="assets/doigts_seul.svg" alt="Ongles" class="nav-icon">
                 <span>Prestations Ongles</span>
             </a>
             <a href="prestations-cils.html" class="sidebar-link active">
-                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 5c-4 0-8 3-10 7 2 4 6 7 10 7s8-3 10-7c-2-4-6-7-10-7z"/>
-                    <path d="M12 4V1M8 5L6 2M16 5l2-3M4 8L1 6M20 8l3-2"/>
-                </svg>
+                <img src="assets/oeil_seul.svg" alt="Cils" class="nav-icon">
                 <span>Prestations Cils</span>
+            </a>
+            <a href="prestations-sourcils.html" class="sidebar-link">
+                <img src="assets/sourcil_seul.svg" alt="Sourcils" class="nav-icon">
+                <span>Prestations Sourcils</span>
             </a>
             <a href="contact.html" class="sidebar-link">
                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -92,9 +108,13 @@
         <!-- Page Header -->
         <header class="page-header">
             <div class="header-particles"></div>
+            <div class="header-bubbles-bg">
+                <img src="assets/bulle_plusieurs.svg" alt="" class="bubbles-header-left" aria-hidden="true">
+                <img src="assets/bulle_plusieurs.svg" alt="" class="bubbles-header-right" aria-hidden="true">
+            </div>
             <div class="container">
                 <span class="section-tag">Nos Prestations</span>
-                <h1 class="page-title">Cils</h1>
+                <h1 class="page-title">CILS</h1>
                 <p class="page-subtitle">Extensions et soins pour un regard intense, naturel et captivant</p>
             </div>
         </header>
@@ -321,11 +341,6 @@
                 <div class="prestations-cta">
                     <a href="https://www.fresha.com/fr/book-now/flo-rinails-uepist6u/services?lid=2714198&eid=4788688&share=true&pId=2626432" target="_blank" rel="noopener" class="btn btn-primary">
                         <span>Prendre rendez-vous</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15,3 21,3 21,9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
                     </a>
                 </div>
             </div>
@@ -336,16 +351,16 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-brand">
-                        <img src="assets/logo_flo_rinails.svg" alt="Flo Rinails" class="footer-logo">
+                        <img src="assets/logo_flo_rinails.svg" alt="Flo RiNails" class="footer-logo">
                         <p class="footer-tagline">Votre institut de beauté</p>
                     </div>
                     <div class="footer-links">
                         <div class="footer-column">
                             <h4>Navigation</h4>
                             <a href="index.html">Accueil</a>
-                            <a href="prestations-sourcils.html">Sourcils</a>
                             <a href="prestations-ongles.html">Ongles</a>
                             <a href="prestations-cils.html">Cils</a>
+                            <a href="prestations-sourcils.html">Sourcils</a>
                         </div>
                         <div class="footer-column">
                             <h4>Contact</h4>
@@ -370,7 +385,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 Flo Rinails. Tous droits réservés.</p>
+                    <p>&copy; 2025 Flo RiNails. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
