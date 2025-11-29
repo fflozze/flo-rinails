@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prestations Sourcils | Flo RiNails</title>
+    <title>Galerie | Flo RiNails</title>
     <link rel="icon" type="image/webp" href="assets/logo_flo_rinails.webp">
-    <meta name="description" content="Découvrez nos prestations sourcils : microblading, restructuration, teinture et plus. Sublimez votre regard chez Flo RiNails.">
+    <meta name="description" content="Découvrez nos réalisations en images : ongles, extensions de cils et sourcils. Galerie photo des créations Flo RiNails.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -71,11 +71,11 @@
                 <img src="assets/oeil_seul.svg" alt="Cils" class="nav-icon">
                 <span>Prestations Cils</span>
             </a>
-            <a href="prestations-sourcils.html" class="sidebar-link active">
+            <a href="prestations-sourcils.html" class="sidebar-link">
                 <img src="assets/sourcil_seul.svg" alt="Sourcils" class="nav-icon">
                 <span>Prestations Sourcils</span>
             </a>
-            <a href="galerie.html" class="sidebar-link">
+            <a href="galerie.html" class="sidebar-link active">
                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <rect x="3" y="3" width="18" height="18" rx="2"/>
                     <circle cx="8.5" cy="8.5" r="1.5"/>
@@ -126,33 +126,73 @@
                 <img src="assets/bulle_plusieurs.svg" alt="" class="bubbles-header-right" aria-hidden="true">
             </div>
             <div class="container">
-                <span class="section-tag">Nos Prestations</span>
-                <h1 class="page-title">SOURCILS</h1>
-                <p class="page-subtitle">Nos prestations sourcils arrivent bientôt</p>
+                <span class="section-tag">Nos Réalisations</span>
+                <h1 class="page-title">GALERIE</h1>
+                <p class="page-subtitle">Découvrez nos créations en images</p>
             </div>
         </header>
 
-        <!-- Coming Soon Section -->
-        <section class="prestations-section">
+        <!-- Gallery Section -->
+        <section class="gallery-section">
             <div class="container">
-                <div class="coming-soon-wrapper">
-                    <div class="coming-soon-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12,6 12,12 16,14"/>
-                        </svg>
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-item gallery-item-large">
+                        <div class="gallery-image">
+                            <img src="assets/assets_galerie/img_ongles_1.jpg" alt="Pose d'ongles en gel">
+                            <div class="gallery-overlay">
+                                <h3>Pose complète gel</h3>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="coming-soon-title">Bientôt disponible</h2>
-                    <p class="coming-soon-text">Nos prestations sourcils arrivent très prochainement.<br>Microblading, restructuration, teinture et bien plus encore...</p>
-                    <p class="coming-soon-subtext">Restez connectés sur nos réseaux sociaux pour être informés du lancement !</p>
-                    <div class="coming-soon-social">
+                    <div class="gallery-item gallery-item-tall">
+                        <div class="gallery-image">
+                            <img src="assets/assets_galerie/img_ongles_2.jpg" alt="Nail art créatif">
+                            <div class="gallery-overlay">
+                                <h3>Nail art créatif</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="assets/assets_galerie/img_ongles_3.jpg" alt="French manucure">
+                            <div class="gallery-overlay">
+                                <h3>French élégante</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="assets/assets_galerie/img_ongles_4.jpg" alt="Vernis semi-permanent">
+                            <div class="gallery-overlay">
+                                <h3>Semi-permanent</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item gallery-item-large">
+                        <div class="gallery-image">
+                            <img src="assets/assets_galerie/img_ongles_5.jpg" alt="Babyboomer ongles">
+                            <div class="gallery-overlay">
+                                <h3>Babyboomer</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram CTA -->
+                <div class="gallery-cta">
+                    <div class="gallery-cta-content">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                        </svg>
+                        <div class="gallery-cta-text">
+                            <h3>Plus de créations sur Instagram</h3>
+                            <p>Suivez-nous pour découvrir nos dernières réalisations au quotidien</p>
+                        </div>
                         <a href="https://www.instagram.com/flo_rinails" target="_blank" rel="noopener" class="btn btn-primary">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="2" y="2" width="20" height="20" rx="5"/>
-                                <circle cx="12" cy="12" r="4"/>
-                                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
-                            </svg>
-                            <span>Suivez-nous sur Instagram</span>
+                            <span>@flo_rinails</span>
                         </a>
                     </div>
                 </div>
@@ -174,6 +214,7 @@
                             <a href="prestations-ongles.html">Ongles</a>
                             <a href="prestations-cils.html">Cils</a>
                             <a href="prestations-sourcils.html">Sourcils</a>
+                            <a href="galerie.html">Galerie</a>
                         </div>
                         <div class="footer-column">
                             <h4>Contact</h4>
@@ -209,6 +250,31 @@
         </footer>
     </main>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Fermer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <button class="lightbox-prev" aria-label="Image précédente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </button>
+        <button class="lightbox-next" aria-label="Image suivante">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title"></h3>
+            </div>
+        </div>
+    </div>
+
     <!-- Bouton Retour en Haut -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut de page">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -219,4 +285,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

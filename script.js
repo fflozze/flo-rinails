@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initScrollToTop();
     initSearch();
+    initGallery();
 });
 
 /* ========================================
@@ -549,13 +550,21 @@ function initSearch() {
     const searchData = {
         categories: [
             // Catégories Ongles - Mains
-            { name: 'Pose de Gel', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails' },
-            { name: 'Extensions', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails' },
-            { name: 'Vernis Semi-Permanent', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails' },
-            { name: 'Semi-Permanent Doux', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails' },
-            { name: 'Vernis Classique', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails' },
-            { name: 'Soins & Dépose', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails' },
-            { name: 'Suppléments & Options', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails' },
+            { name: 'Pose de Gel', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Extensions', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Vernis Semi-Permanent', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Semi-Permanent Doux', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Vernis Classique', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Soins & Dépose', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Suppléments & Options', page: 'prestations-ongles.html', tab: 'mains', type: 'category', icon: 'nails-mains', zone: 'Mains' },
+            // Catégories Ongles - Pieds
+            { name: 'Pose de Gel', page: 'prestations-ongles.html', tab: 'pieds', type: 'category', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Extensions', page: 'prestations-ongles.html', tab: 'pieds', type: 'category', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Vernis Semi-Permanent', page: 'prestations-ongles.html', tab: 'pieds', type: 'category', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Semi-Permanent Doux', page: 'prestations-ongles.html', tab: 'pieds', type: 'category', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Vernis Classique', page: 'prestations-ongles.html', tab: 'pieds', type: 'category', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Soins & Dépose', page: 'prestations-ongles.html', tab: 'pieds', type: 'category', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Suppléments & Options', page: 'prestations-ongles.html', tab: 'pieds', type: 'category', icon: 'nails-pieds', zone: 'Pieds' },
             // Catégories Cils
             { name: 'Extensions de Cils', page: 'prestations-cils.html', type: 'category', icon: 'lashes' },
             { name: 'Rehaussement de Cils', page: 'prestations-cils.html', type: 'category', icon: 'lashes' },
@@ -565,55 +574,98 @@ function initSearch() {
             { name: 'Prestations Sourcils', page: 'prestations-sourcils.html', type: 'page', icon: 'brows' },
         ],
         prestations: [
-            // Ongles - Pose de Gel (Mains)
-            { name: 'Pose Gel Couleur', price: '40€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails' },
-            { name: 'Pose Gel French Classique', price: '45€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails' },
-            { name: 'Pose Gel French Babyboomer', price: '50€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails' },
-            { name: 'Remplissage Couleur', price: '50€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails' },
-            { name: 'Remplissage French Classique', price: '55€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails' },
-            { name: 'Remplissage Babyboomer', price: '60€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails' },
-            // Ongles - Extensions
-            { name: 'Extensions Chablons', price: '+30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Extensions', icon: 'nails' },
-            { name: 'Extensions Capsules Américaines', price: '+25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Extensions', icon: 'nails' },
-            { name: 'Extensions Ongles Rongés / Acrygel', price: '+30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Extensions', icon: 'nails' },
-            // Ongles - Vernis Semi-Permanent
-            { name: 'Pose Couleur Semi-Permanent', price: '30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails' },
-            { name: 'Pose French Classique Semi-Permanent', price: '35€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails' },
-            { name: 'Pose French Babyboomer Semi-Permanent', price: '40€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails' },
-            { name: 'Dépose/Pose Couleur Semi-Permanent', price: '40€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails' },
-            { name: 'Dépose/Pose French Classique Semi-Permanent', price: '45€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails' },
-            { name: 'Dépose/Pose Babyboomer Semi-Permanent', price: '50€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails' },
-            // Ongles - Semi-Permanent Doux
-            { name: 'Pose Couleur Semi-Permanent Doux', price: '20€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails' },
-            { name: 'Pose French Classique Semi-Permanent Doux', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails' },
-            { name: 'Dépose/Pose Couleur Semi-Permanent Doux', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails' },
-            { name: 'Dépose/Pose French Classique Semi-Permanent Doux', price: '30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails' },
-            // Ongles - Vernis Classique
-            { name: 'Pose Couleur Vernis Classique', price: '20€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails' },
-            { name: 'Pose French Classique Vernis', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails' },
-            { name: 'Dépose/Pose Couleur Vernis Classique', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails' },
-            { name: 'Dépose/Pose French Classique Vernis', price: '30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails' },
-            // Ongles - Soins
-            { name: 'Mise en Beauté Simple', price: '10€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails' },
-            { name: 'Spa des Mains', price: '35€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails' },
-            { name: 'Dépose Gel + Remise en Beauté', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails' },
-            { name: 'Dépose Semi-Permanent + Remise en Beauté', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails' },
-            { name: 'Dépose Semi-Permanent Doux + Remise en Beauté', price: '15€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails' },
-            // Ongles - Suppléments
-            { name: 'Décos (simple ou élaboré)', price: '0,50€ à 2€', page: 'prestations-ongles.html', tab: 'mains', category: 'Suppléments', icon: 'nails' },
-            { name: 'Nail Art', price: '0,50€ à 2€', page: 'prestations-ongles.html', tab: 'mains', category: 'Suppléments', icon: 'nails' },
-            { name: 'Forfait Mains + Pieds', price: '-5€', page: 'prestations-ongles.html', tab: 'mains', category: 'Suppléments', icon: 'nails' },
-            // Ongles - Pieds
-            { name: 'Spa des Pieds', price: '45€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails' },
-            { name: 'Option Peeling Pieds', price: '+25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails' },
-            // Cils - Extensions
+            // =============================================
+            // ONGLES MAINS - Pose de Gel
+            // =============================================
+            { name: 'Pose Gel Couleur', price: '40€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Pose Gel French Classique', price: '45€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Pose Gel French Babyboomer', price: '50€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Remplissage Couleur', price: '50€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Remplissage French Classique', price: '55€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Remplissage Babyboomer', price: '60€', page: 'prestations-ongles.html', tab: 'mains', category: 'Pose de Gel', icon: 'nails-mains', zone: 'Mains' },
+            // ONGLES MAINS - Extensions
+            { name: 'Extensions Chablons', price: '+30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Extensions', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Extensions Capsules Américaines', price: '+25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Extensions', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Extensions Ongles Rongés / Acrygel', price: '+30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Extensions', icon: 'nails-mains', zone: 'Mains' },
+            // ONGLES MAINS - Vernis Semi-Permanent
+            { name: 'Pose Couleur Semi-Permanent', price: '30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Pose French Classique Semi-Permanent', price: '35€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Pose French Babyboomer Semi-Permanent', price: '40€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose/Pose Couleur Semi-Permanent', price: '40€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose/Pose French Classique Semi-Permanent', price: '45€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose/Pose Babyboomer Semi-Permanent', price: '50€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Semi-Permanent', icon: 'nails-mains', zone: 'Mains' },
+            // ONGLES MAINS - Semi-Permanent Doux
+            { name: 'Pose Couleur Semi-Permanent Doux', price: '20€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Pose French Classique Semi-Permanent Doux', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose/Pose Couleur Semi-Permanent Doux', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose/Pose French Classique Semi-Permanent Doux', price: '30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Semi-Permanent Doux', icon: 'nails-mains', zone: 'Mains' },
+            // ONGLES MAINS - Vernis Classique
+            { name: 'Pose Couleur Vernis Classique', price: '20€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Pose French Classique Vernis', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose/Pose Couleur Vernis Classique', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose/Pose French Classique Vernis', price: '30€', page: 'prestations-ongles.html', tab: 'mains', category: 'Vernis Classique', icon: 'nails-mains', zone: 'Mains' },
+            // ONGLES MAINS - Soins & Dépose
+            { name: 'Mise en Beauté Simple', price: '10€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Spa des Mains', price: '35€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose Gel + Remise en Beauté', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose Semi-Permanent + Remise en Beauté', price: '25€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Dépose Semi-Permanent Doux + Remise en Beauté', price: '15€', page: 'prestations-ongles.html', tab: 'mains', category: 'Soins & Dépose', icon: 'nails-mains', zone: 'Mains' },
+            // ONGLES MAINS - Suppléments
+            { name: 'Décos (simple ou élaboré)', price: '0,50€ à 2€', page: 'prestations-ongles.html', tab: 'mains', category: 'Suppléments & Options', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Nail Art', price: '0,50€ à 2€', page: 'prestations-ongles.html', tab: 'mains', category: 'Suppléments & Options', icon: 'nails-mains', zone: 'Mains' },
+            { name: 'Forfait Mains + Pieds', price: '-5€', page: 'prestations-ongles.html', tab: 'mains', category: 'Suppléments & Options', icon: 'nails-mains', zone: 'Mains' },
+            
+            // =============================================
+            // ONGLES PIEDS - Pose de Gel
+            // =============================================
+            { name: 'Pose Gel Couleur', price: '40€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Pose de Gel', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Pose Gel French Classique', price: '45€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Pose de Gel', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Pose Gel French Babyboomer', price: '50€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Pose de Gel', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Remplissage Couleur', price: '50€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Pose de Gel', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Remplissage French Classique', price: '55€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Pose de Gel', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Remplissage Babyboomer', price: '60€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Pose de Gel', icon: 'nails-pieds', zone: 'Pieds' },
+            // ONGLES PIEDS - Extensions
+            { name: 'Extensions Chablons', price: '+30€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Extensions', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Extensions Capsules Américaines', price: '+25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Extensions', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Extensions Ongles Rongés / Acrygel', price: '+30€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Extensions', icon: 'nails-pieds', zone: 'Pieds' },
+            // ONGLES PIEDS - Vernis Semi-Permanent
+            { name: 'Pose Couleur Semi-Permanent', price: '30€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Semi-Permanent', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Pose French Classique Semi-Permanent', price: '35€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Semi-Permanent', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Pose French Babyboomer Semi-Permanent', price: '40€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Semi-Permanent', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose/Pose Couleur Semi-Permanent', price: '40€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Semi-Permanent', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose/Pose French Classique Semi-Permanent', price: '45€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Semi-Permanent', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose/Pose Babyboomer Semi-Permanent', price: '50€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Semi-Permanent', icon: 'nails-pieds', zone: 'Pieds' },
+            // ONGLES PIEDS - Semi-Permanent Doux
+            { name: 'Pose Couleur Semi-Permanent Doux', price: '20€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Semi-Permanent Doux', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Pose French Classique Semi-Permanent Doux', price: '25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Semi-Permanent Doux', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose/Pose Couleur Semi-Permanent Doux', price: '25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Semi-Permanent Doux', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose/Pose French Classique Semi-Permanent Doux', price: '30€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Semi-Permanent Doux', icon: 'nails-pieds', zone: 'Pieds' },
+            // ONGLES PIEDS - Vernis Classique
+            { name: 'Pose Couleur Vernis Classique', price: '20€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Classique', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Pose French Classique Vernis', price: '25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Classique', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose/Pose Couleur Vernis Classique', price: '25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Classique', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose/Pose French Classique Vernis', price: '30€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Vernis Classique', icon: 'nails-pieds', zone: 'Pieds' },
+            // ONGLES PIEDS - Soins & Dépose
+            { name: 'Mise en Beauté Simple', price: '10€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Spa des Pieds', price: '45€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Option Peeling', price: '+25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose Gel + Remise en Beauté', price: '25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose Semi-Permanent + Remise en Beauté', price: '25€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Dépose Semi-Permanent Doux + Remise en Beauté', price: '15€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Soins & Dépose', icon: 'nails-pieds', zone: 'Pieds' },
+            // ONGLES PIEDS - Suppléments
+            { name: 'Décos (simple ou élaboré)', price: '0,50€ à 2€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Suppléments & Options', icon: 'nails-pieds', zone: 'Pieds' },
+            { name: 'Forfait Mains + Pieds', price: '-5€', page: 'prestations-ongles.html', tab: 'pieds', category: 'Suppléments & Options', icon: 'nails-pieds', zone: 'Pieds' },
+            
+            // =============================================
+            // CILS - Extensions
+            // =============================================
             { name: 'Pose Complète Cil à Cil', price: '85€', page: 'prestations-cils.html', category: 'Extensions de Cils', icon: 'lashes' },
             { name: 'Remplissage Cil à Cil', price: '45€', page: 'prestations-cils.html', category: 'Extensions de Cils', icon: 'lashes' },
             { name: 'Pose Complète Mixte', price: '95€', page: 'prestations-cils.html', category: 'Extensions de Cils', icon: 'lashes' },
             { name: 'Remplissage Mixte', price: '55€', page: 'prestations-cils.html', category: 'Extensions de Cils', icon: 'lashes' },
             { name: 'Supplément Cils Fantaisie', price: '+5€', page: 'prestations-cils.html', category: 'Extensions de Cils', icon: 'lashes' },
             { name: 'Dépose Cils Seule', price: '25€', page: 'prestations-cils.html', category: 'Extensions de Cils', icon: 'lashes' },
-            // Cils - Rehaussement
+            // CILS - Rehaussement
             { name: 'Rehaussement des Cils Naturels', price: '60€', page: 'prestations-cils.html', category: 'Rehaussement de Cils', icon: 'lashes' },
             { name: 'Rehaussement + Teinture', price: '68€', page: 'prestations-cils.html', category: 'Rehaussement de Cils', icon: 'lashes' },
             { name: 'Rehaussement + Mascara Semi-Permanent', price: '90€', page: 'prestations-cils.html', category: 'Rehaussement de Cils', icon: 'lashes' },
@@ -743,16 +795,42 @@ function initSearch() {
         // Normaliser la requête
         const normalizedQuery = normalizeText(query);
         
-        // Rechercher dans les catégories
+        // Rechercher dans les catégories (limiter à 4 pour voir mains + pieds)
         const categoryResults = searchData.categories.filter(item => 
             normalizeText(item.name).includes(normalizedQuery)
-        ).slice(0, 3);
+        ).slice(0, 4);
         
         // Rechercher dans les prestations
-        const prestationResults = searchData.prestations.filter(item => 
+        let prestationResults = searchData.prestations.filter(item => 
             normalizeText(item.name).includes(normalizedQuery) ||
             normalizeText(item.category || '').includes(normalizedQuery)
-        ).slice(0, 8);
+        );
+        
+        // Trier pour alterner mains et pieds (pour les ongles)
+        // D'abord grouper par nom de prestation
+        const groupedByName = {};
+        prestationResults.forEach(item => {
+            const key = item.name;
+            if (!groupedByName[key]) {
+                groupedByName[key] = [];
+            }
+            groupedByName[key].push(item);
+        });
+        
+        // Reconstruire la liste en alternant mains/pieds pour chaque prestation
+        const sortedResults = [];
+        Object.values(groupedByName).forEach(group => {
+            // Trier pour avoir mains en premier, puis pieds
+            group.sort((a, b) => {
+                if (a.zone === 'Mains' && b.zone === 'Pieds') return -1;
+                if (a.zone === 'Pieds' && b.zone === 'Mains') return 1;
+                return 0;
+            });
+            sortedResults.push(...group);
+        });
+        
+        // Limiter à 12 résultats pour voir mains + pieds
+        prestationResults = sortedResults.slice(0, 12);
         
         currentResults = [...categoryResults, ...prestationResults];
         selectedIndex = -1;
@@ -830,7 +908,28 @@ function initSearch() {
     function renderResultItem(item, query, type) {
         const iconSvg = getIconSvg(item.icon);
         const highlightedName = highlightMatch(item.name, query);
-        const meta = type === 'prestation' ? item.category : (item.tab ? `Ongles - ${item.tab === 'mains' ? 'Mains' : 'Pieds'}` : 'Page');
+        
+        // Construire le meta avec la zone (Mains/Pieds) si applicable
+        let meta = '';
+        if (type === 'prestation') {
+            meta = item.category;
+            if (item.zone) {
+                meta += ` • ${item.zone}`;
+            }
+        } else if (type === 'category') {
+            if (item.zone) {
+                meta = `Ongles • ${item.zone}`;
+            } else if (item.tab) {
+                meta = `Ongles • ${item.tab === 'mains' ? 'Mains' : 'Pieds'}`;
+            } else {
+                meta = 'Catégorie';
+            }
+        } else {
+            meta = 'Page';
+        }
+        
+        // Badge zone pour les résultats ongles
+        const zoneBadge = item.zone ? `<span class="search-result-zone search-result-zone--${item.zone.toLowerCase()}">${item.zone}</span>` : '';
         
         return `
             <div class="search-result-item" data-page="${item.page}" data-tab="${item.tab || ''}">
@@ -838,7 +937,7 @@ function initSearch() {
                     ${iconSvg}
                 </div>
                 <div class="search-result-content">
-                    <div class="search-result-title">${highlightedName}</div>
+                    <div class="search-result-title">${highlightedName} ${zoneBadge}</div>
                     <div class="search-result-meta">${meta}</div>
                 </div>
                 ${item.price ? `<div class="search-result-price">${item.price}</div>` : ''}
@@ -852,7 +951,10 @@ function initSearch() {
     function getIconSvg(type) {
         switch (type) {
             case 'nails':
-                return `<img src="assets/doigts_seul.svg" alt="Ongles">`;
+            case 'nails-mains':
+                return `<img src="assets/main_gauche.svg" alt="Mains">`;
+            case 'nails-pieds':
+                return `<img src="assets/pied_femme.svg" alt="Pieds">`;
             case 'lashes':
                 return `<img src="assets/oeil_seul.svg" alt="Cils">`;
             case 'brows':
@@ -1008,6 +1110,130 @@ function initSearch() {
                 }, 200);
             }
         }, 150);
+    }
+}
+
+/* ========================================
+   Gallery - Lightbox
+   ======================================== */
+
+function initGallery() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    
+    if (galleryItems.length === 0) return;
+    
+    let currentIndex = 0;
+    
+    // Lightbox functionality
+    if (lightbox) {
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = lightbox.querySelector('.lightbox-title');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+        
+        // Open lightbox on item click
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                openLightbox(item);
+            });
+        });
+        
+        function openLightbox(item) {
+            const img = item.querySelector('img');
+            const overlay = item.querySelector('.gallery-overlay');
+            const title = overlay.querySelector('h3');
+            
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightboxTitle.textContent = title ? title.textContent : '';
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            updateNavButtons();
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function updateNavButtons() {
+            prevBtn.style.opacity = currentIndex > 0 ? '1' : '0.3';
+            nextBtn.style.opacity = currentIndex < galleryItems.length - 1 ? '1' : '0.3';
+        }
+        
+        function showPrevious() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                openLightbox(galleryItems[currentIndex]);
+            }
+        }
+        
+        function showNext() {
+            if (currentIndex < galleryItems.length - 1) {
+                currentIndex++;
+                openLightbox(galleryItems[currentIndex]);
+            }
+        }
+        
+        // Event listeners
+        closeBtn.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', showPrevious);
+        nextBtn.addEventListener('click', showNext);
+        
+        // Close on overlay click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            switch (e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    showPrevious();
+                    break;
+                case 'ArrowRight':
+                    showNext();
+                    break;
+            }
+        });
+        
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    showNext();
+                } else {
+                    showPrevious();
+                }
+            }
+        }
     }
 }
 
