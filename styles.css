@@ -835,7 +835,7 @@ ul {
 }
 
 .title-nails {
-    background: linear-gradient(135deg, #8a555e 0%, #Fbdeec 100%);
+    background: linear-gradient(135deg, #8a555e 0%, #f3c290 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
