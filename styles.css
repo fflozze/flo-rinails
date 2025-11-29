@@ -742,7 +742,7 @@ ul {
     background: 
         radial-gradient(ellipse at 80% 20%, rgba(243, 194, 144, 0.15) 0%, transparent 50%),
         radial-gradient(ellipse at 20% 80%, rgba(138, 85, 94, 0.1) 0%, transparent 50%),
-        linear-gradient(135deg, #8a555e 0%, #603b41 100%);
+        #b36d7a;
 }
 
 .hero-pattern {
