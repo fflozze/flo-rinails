@@ -715,6 +715,23 @@ function initSearch() {
         }
     });
     
+    // Fermer la recherche en cliquant à l'extérieur
+    document.addEventListener('click', (e) => {
+        const searchContainer = document.getElementById('searchContainer');
+        
+        // Vérifier si le clic est en dehors du conteneur de recherche
+        if (searchContainer && !searchContainer.contains(e.target)) {
+            // Fermer les résultats si actifs
+            if (searchResults.classList.contains('active')) {
+                searchResults.classList.remove('active');
+            }
+            // Fermer la searchBox mobile si active
+            if (searchBox.classList.contains('active')) {
+                closeSearch();
+            }
+        }
+    });
+    
     function isInputFocused() {
         const el = document.activeElement;
         return el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable;

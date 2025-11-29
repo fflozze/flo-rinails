@@ -804,7 +804,10 @@ ul {
 }
 
 .title-flo,
-.title-ri,
+.title-ri {
+    color: #8b565f;
+}
+
 .title-nails {
     background: var(--gradient-main);
     -webkit-background-clip: text;
@@ -823,7 +826,16 @@ ul {
 .hero-cta {
     display: flex;
     gap: var(--space-md);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.hero-cta .btn {
+    flex: 0 0 auto;
+    width: auto;
+    white-space: nowrap;
 }
 
 /* Buttons */
@@ -2135,7 +2147,14 @@ ul {
     }
     
     .hero-cta {
-        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: var(--space-md);
+    }
+    
+    .hero-cta .btn {
+        width: auto;
+        white-space: nowrap;
     }
     
     .hero-visual {
@@ -2217,13 +2236,17 @@ ul {
     }
     
     .hero-cta {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
         gap: var(--space-sm);
+        justify-content: space-between;
     }
     
-    .btn {
-        width: 100%;
+    .hero-cta .btn {
+        width: auto;
+        flex: 0 1 auto;
         justify-content: center;
+        white-space: nowrap;
     }
     
     .service-card {
