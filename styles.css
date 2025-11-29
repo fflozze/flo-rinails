@@ -1000,14 +1000,21 @@ ul {
 }
 
 /* Flèche dans les sections sombres */
-.about-section .section-scroll-arrow svg,
-.cta-section .section-scroll-arrow svg {
+.about-section .section-scroll-arrow svg {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.about-section .section-scroll-arrow:hover svg,
-.cta-section .section-scroll-arrow:hover svg {
+.about-section .section-scroll-arrow:hover svg {
     color: rgba(255, 255, 255, 1);
+}
+
+/* Flèche sombre pour CTA */
+.cta-section .section-scroll-arrow svg {
+    color: var(--color-dark);
+}
+
+.cta-section .section-scroll-arrow:hover svg {
+    color: var(--color-primary);
 }
 
 /* ========================================
@@ -1271,27 +1278,34 @@ ul {
 .about-image-wrapper {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+    aspect-ratio: 1;
     animation: float 6s ease-in-out infinite;
 }
 
 .about-decoration {
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: -15px;
+    right: -15px;
     width: 100%;
     height: 100%;
     border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: var(--radius-lg);
+    border-radius: 50%;
 }
 
 .about-image {
     position: relative;
     z-index: 2;
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
+    border-radius: 50%;
+    padding: var(--space-lg);
     background: var(--color-white);
     box-shadow: var(--shadow-lg);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ========================================
@@ -2314,7 +2328,7 @@ ul {
     }
     
     .about-image-wrapper {
-        max-width: 280px;
+        max-width: 320px;
     }
     
     .footer-links {
