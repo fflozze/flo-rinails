@@ -805,7 +805,7 @@ ul {
 
 .title-flo,
 .title-ri {
-    color: #8b565f;
+    color: #603b41;
 }
 
 .title-nails {
@@ -976,13 +976,49 @@ ul {
     50% { transform: translateY(8px); }
 }
 
+/* Section Scroll Arrow */
+.section-scroll-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg) 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+
+.section-scroll-arrow svg {
+    width: 36px;
+    height: 36px;
+    color: var(--color-dark);
+    animation: arrowBounce 1.8s ease-in-out infinite;
+    transition: var(--transition-base);
+}
+
+.section-scroll-arrow:hover svg {
+    color: var(--color-primary);
+}
+
+/* Flèche dans les sections sombres */
+.about-section .section-scroll-arrow svg,
+.cta-section .section-scroll-arrow svg {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.about-section .section-scroll-arrow:hover svg,
+.cta-section .section-scroll-arrow:hover svg {
+    color: rgba(255, 255, 255, 1);
+}
+
 /* ========================================
    Services Section
    ======================================== */
 
 .services-section {
     padding: var(--space-2xl) 0;
+    padding-bottom: var(--space-lg);
     background: var(--gradient-soft);
+    position: relative;
 }
 
 .section-header {
@@ -1159,6 +1195,7 @@ ul {
 
 .about-section {
     padding: var(--space-2xl) 0;
+    padding-bottom: var(--space-lg);
     background: linear-gradient(135deg, #8a555e 0%, #603b41 100%);
     position: relative;
     overflow: hidden;
