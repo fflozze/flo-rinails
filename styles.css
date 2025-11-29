@@ -3,6 +3,16 @@
    Direction Artistique & Palette
    ======================================== */
 
+/* Police personnalisée Autography */
+@font-face {
+    font-family: 'Autography';
+    src: url('assets/police/Autography.woff2') format('woff2'),
+         url('assets/police/Autography.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     /* Couleurs principales */
     --gradient-start: #8A555E;
@@ -821,17 +831,18 @@ ul {
 }
 
 .hero-title {
-    font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    font-weight: 400;
-    line-height: 1.1;
+    font-family: 'Autography', cursive;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: normal;
+    line-height: 1;
     margin-bottom: var(--space-md);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .title-flo,
 .title-ri {
-    color: #F3C290;
+    color: #d29e87;
 }
 
 .title-nails {
