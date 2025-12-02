@@ -649,6 +649,8 @@ ul {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .sidebar-link {
